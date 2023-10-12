@@ -16,7 +16,7 @@ def censure():
     texto = data.get('texto', '')
     for palavra in palavroes:
         texto = texto.replace(palavra, '*' * len(palavra))
-    return jsonify({"texto_censurado": texto})
+    return jsonify({texto})
 
 if __name__ == '__main__':
     app.run()
